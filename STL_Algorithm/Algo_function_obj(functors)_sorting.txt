@@ -1,0 +1,23 @@
+#include <iostream>
+#include <algorithm>
+#include <vector>
+//#include <execution>
+using namespace std;
+
+struct Test{
+    bool operator()(int a, int b) const
+    {
+        return a < b;
+    }
+};
+
+int main()
+{
+    Test t;
+   vector<int>v ={3,2,9,1,8,7};
+   //sort(v.begin(),v.end(),(t); another method
+   sort(v.begin(),v.end(),(t));
+   for(auto e : v)
+    cout<<e;
+    return 0;
+}

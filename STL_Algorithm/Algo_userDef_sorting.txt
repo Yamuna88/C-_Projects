@@ -1,0 +1,30 @@
+#include <iostream>
+#include <algorithm>
+#include <vector>
+//#include <execution>
+using namespace std;
+
+class Point{
+public:
+    int x,y;
+
+    Point(int x=0, int y=0)
+    {
+        this->x=x;
+        this->y=y;
+    }
+
+    bool operator <(const Point &p1)
+    {
+        return (x+y)<(p1.x+p1.y);
+    }
+};
+
+int main()
+{
+   vector<Point>v ={{1,2},{3,1},{0,1}};
+   sort(v.begin(),v.end());
+   for(auto e : v)
+    cout<<e.x<<" "<<e.y<<" "<<endl;
+    return 0;
+}
