@@ -1,0 +1,16 @@
+#include <iostream>
+#include <algorithm>
+#include <vector>
+//#include <execution>
+using namespace std;
+
+int main()
+{
+   vector<int>v ={3,2,9,1,8,7};
+   for(int val: v){[](int v){
+       if(v >4)
+       cout<<v;
+   }(val);}
+
+    return 0;
+}
